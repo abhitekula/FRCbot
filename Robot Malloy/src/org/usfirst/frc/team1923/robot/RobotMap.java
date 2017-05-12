@@ -26,6 +26,12 @@ public class RobotMap {
 	public static final int LEFT_DRIVE_TALON1=4;
 	public static final int LEFT_DRIVE_TALON2=5;
 	public static final int LEFT_DRIVE_TALON3=6;
+
+	//Vision
+	public static final double TURN_CONSTANT = 1000;
+	public static final int IMG_WIDTH = 320;
+	public static final int IMG_HEIGHT = 240;
+	public static final String CAMERA_IP = "10.19.23.15";
 	
 	
 }
