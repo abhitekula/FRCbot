@@ -62,4 +62,8 @@ public class DriveSubsystem extends Subsystem {
 		// Set the default command for a subsystem here.
 		setDefaultCommand(new JoystickDrive());
 	}
+
+	public void stop() {
+		TankDrive(0,0);
+	}
 }

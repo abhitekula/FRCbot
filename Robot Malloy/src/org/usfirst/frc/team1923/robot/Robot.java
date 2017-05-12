@@ -9,7 +9,10 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 import org.usfirst.frc.team1923.robot.commands.JoystickDrive;
+import org.usfirst.frc.team1923.robot.commands.vision.FollowVisionTargetCommand;
+import org.usfirst.frc.team1923.robot.commands.vision.TurnToVisionTargetCommand;
 import org.usfirst.frc.team1923.robot.subsystems.DriveSubsystem;
+import org.usfirst.frc.team1923.robot.subsystems.VisionSubsystem;
 
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -21,6 +24,7 @@ import org.usfirst.frc.team1923.robot.subsystems.DriveSubsystem;
 public class Robot extends IterativeRobot {
 
 	public static final DriveSubsystem driveSubsys = new DriveSubsystem();
+	public static final VisionSubsystem visionSubsys = new VisionSubsystem();
 	public static OI oi;
 
 	Command autonomousCommand;
@@ -34,7 +38,8 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		oi = new OI();
 		chooser.addDefault("Default Auto", new JoystickDrive());
-		// chooser.addObject("My Auto", new MyAutoCommand());
+		chooser.addObject("Turn to Vision Target", new TurnToVisionTargetCommand());
+		chooser.addObject("Follow Vision Target", new FollowVisionTargetCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}
 
