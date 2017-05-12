@@ -20,7 +20,7 @@ import org.usfirst.frc.team1923.robot.subsystems.DriveSubsystem;
  */
 public class Robot extends IterativeRobot {
 
-	public static final DriveSubsystem exampleSubsystem = new DriveSubsystem();
+	public static final DriveSubsystem driveSubsys = new DriveSubsystem();
 	public static OI oi;
 
 	Command autonomousCommand;
@@ -45,7 +45,7 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void disabledInit() {
-
+		//Robot.driveSubsys.disable();
 	}
 
 	@Override
