@@ -19,13 +19,13 @@ public class RobotMap {
 	
 	public static final int XBOX_CONTROLLER_PORT=0;
 	
-	public static final int RIGHT_DRIVE_TALON1=1;
-	public static final int RIGHT_DRIVE_TALON2=2;
-	public static final int RIGHT_DRIVE_TALON3=3;
+	public static final int RIGHT_DRIVE_TALON1=4;
+	public static final int RIGHT_DRIVE_TALON2=5;
+	public static final int RIGHT_DRIVE_TALON3=6;
 	
-	public static final int LEFT_DRIVE_TALON1=4;
-	public static final int LEFT_DRIVE_TALON2=5;
-	public static final int LEFT_DRIVE_TALON3=6;
+	public static final int LEFT_DRIVE_TALON1=1;
+	public static final int LEFT_DRIVE_TALON2=2;
+	public static final int LEFT_DRIVE_TALON3=3;
 	
 	
 }

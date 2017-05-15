@@ -24,6 +24,10 @@ public class DriveSubsystem extends Subsystem {
 		left1= new Talon(RobotMap.LEFT_DRIVE_TALON1);
 		left2= new Talon(RobotMap.LEFT_DRIVE_TALON2);
 		left3= new Talon(RobotMap.LEFT_DRIVE_TALON3);
+		
+		right1.setInverted(true);
+		right2.setInverted(true);
+		right3.setInverted(true);
 
 	}
 	
