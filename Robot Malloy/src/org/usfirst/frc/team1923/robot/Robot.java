@@ -1,6 +1,8 @@
 
 package org.usfirst.frc.team1923.robot;
 
+import edu.wpi.cscore.UsbCamera;
+import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
@@ -32,6 +34,15 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void robotInit() {
+		UsbCamera camera = new UsbCamera("LifeCam", 0);
+		camera.setFPS(20);
+		camera.setBrightness(0);
+		camera.setWhiteBalanceHoldCurrent();
+		camera.setExposureManual(0);
+		camera.setResolution(640, 480);
+		//CameraServer.getInstance().addCamera(camera);
+		CameraServer.getInstance().startAutomaticCapture(camera);
+		
 		oi = new OI();
 		chooser.addDefault("Default Auto", new JoystickDrive());
 		// chooser.addObject("My Auto", new MyAutoCommand());
