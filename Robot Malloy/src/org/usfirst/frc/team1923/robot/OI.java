@@ -1,9 +1,7 @@
 package org.usfirst.frc.team1923.robot;
 
-import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj.buttons.Button;
-
-import org.usfirst.frc.team1923.robot.commands.JoystickDrive;
+import org.usfirst.frc.team1923.robot.commands.SetDriveMode;
+import org.usfirst.frc.team1923.robot.utils.controller.XboxController;
 
 /**
  * This class is the glue that binds the controls on the physical operator
@@ -39,5 +37,10 @@ public class OI {
 	// button.whenReleased(new ExampleCommand());
 	
 	public static XboxController xbox = new XboxController(0);
+	
+	public OI(){
+		xbox.rb.whenActive(new SetDriveMode(false));
+		xbox.lb.whenActive(new SetDriveMode(true));
+	}
 	
 }

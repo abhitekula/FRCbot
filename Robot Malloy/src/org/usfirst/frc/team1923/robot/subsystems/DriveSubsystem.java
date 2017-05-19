@@ -16,6 +16,8 @@ public class DriveSubsystem extends Subsystem {
 	private Talon right1, right2, right3;
 	private Talon left1, left2, left3;
 	
+	private boolean tank=false;
+	
 	public DriveSubsystem(){
 		right1= new Talon(RobotMap.RIGHT_DRIVE_TALON1);
 		right2= new Talon(RobotMap.RIGHT_DRIVE_TALON2);
@@ -66,4 +68,14 @@ public class DriveSubsystem extends Subsystem {
 		// Set the default command for a subsystem here.
 		setDefaultCommand(new JoystickDrive());
 	}
+
+	public boolean getTank() {
+		return tank;
+	}
+
+	public void setTank(boolean tank) {
+		this.tank = tank;
+	}
+	
+	
 }
