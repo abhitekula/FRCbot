@@ -41,7 +41,7 @@ public class DriveSubsystem extends Subsystem {
 		left3.disable();
 	}
 	
-	public void TankDrive(double left, double right){
+	public void TankDrive(double right, double left){
 		right1.set(right);
 		right2.set(right);
 		right3.set(right);
