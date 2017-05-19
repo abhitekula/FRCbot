@@ -36,7 +36,7 @@ public class FollowVisionTargetCommand extends Command {
 
         Robot.visionSubsys.refresh();
 
-        if (Robot.visionSubsys.gearTurn < -1) {
+        if (Robot.visionSubsys.turn < -1) {
             power = 0;
             turn = 0;
             Robot.visionSubsys.found = false;
@@ -48,7 +48,7 @@ public class FollowVisionTargetCommand extends Command {
             }
 
             Robot.visionSubsys.found = true;
-            turn = Robot.visionSubsys.gearTurn;
+            turn = Robot.visionSubsys.turn;
         }
 
         SmartDashboard.putNumber("Power", power);

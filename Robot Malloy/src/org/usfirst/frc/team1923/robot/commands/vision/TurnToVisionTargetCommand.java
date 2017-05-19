@@ -36,13 +36,13 @@ public class TurnToVisionTargetCommand extends Command {
 
         Robot.visionSubsys.refresh();
 
-        if (Robot.visionSubsys.gearTurn < -1) {
+        if (Robot.visionSubsys.turn < -1) {
             turn = 0;
             Robot.visionSubsys.found = false;
         } else {
 
             Robot.visionSubsys.found = true;
-            turn = Robot.visionSubsys.gearTurn;
+            turn = Robot.visionSubsys.turn;
         }
 
         SmartDashboard.putNumber("Power", power);

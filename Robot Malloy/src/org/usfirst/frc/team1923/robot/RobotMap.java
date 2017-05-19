@@ -29,9 +29,8 @@ public class RobotMap {
 
 	//Vision
 	public static final double TURN_CONSTANT = 1000;
-	public static final int IMG_WIDTH = 320;
-	public static final int IMG_HEIGHT = 240;
-	public static final String CAMERA_IP = "10.19.23.15";
+	public static final int IMG_WIDTH = 640;
+	public static final int IMG_HEIGHT = 480;
 	
 	
 }

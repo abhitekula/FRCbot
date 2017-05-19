@@ -52,7 +52,7 @@ public class VisionScanCommand extends Command {
 
     @Override
     protected boolean isFinished() {
-        return isTimedOut() || ((Robot.visionSubsys.gearCenterx > 30) && (Robot.visionSubsys.gearCenterx < 280));
+        return isTimedOut() || ((Robot.visionSubsys.centerx > 30) && (Robot.visionSubsys.centerx < 280));
     }
 
 }
