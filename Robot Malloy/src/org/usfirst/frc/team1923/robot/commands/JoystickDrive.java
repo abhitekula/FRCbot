@@ -24,9 +24,9 @@ public class JoystickDrive extends Command {
 	@Override
 	protected void execute() {
 		if(Robot.driveSubsys.getTank())
-			Robot.driveSubsys.TankDrive(OI.xbox.getY(Hand.kLeft), OI.xbox.getY(Hand.kRight));
+			Robot.driveSubsys.TankDrive(OI.xbox.getRawAxis(1), OI.xbox.getRawAxis(5));
 		else
-			Robot.driveSubsys.ArcadeDrive(OI.xbox.getY(Hand.kLeft), OI.xbox.getX(Hand.kRight));
+			Robot.driveSubsys.ArcadeDrive(OI.xbox.getRawAxis(1), OI.xbox.getRawAxis(4));
 	}
 
 	// Make this return true when this Command no longer needs to run execute()
